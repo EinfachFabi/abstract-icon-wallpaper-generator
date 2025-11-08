@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abstract Icon-Wallpaper Generator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      xintegrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <!-- Settings-Panel -->
+    <div id="settings-panel">
+      <h1>Wallpaper-Generator</h1>
+
+      <!-- Resolution & Grid-->
+      <div class="setting-group-header">Resolution & Grid</div>
+      <div class="setting-group">
+        <label for="canvasWidth">Width (px):</label>
+        <input type="number" id="canvasWidth" value="1920" min="100" />
+      </div>
+      <div class="setting-group">
+        <label for="canvasHeight">Height (px):</label>
+        <input type="number" id="canvasHeight" value="1080" min="100" />
+      </div>
+      <div class="setting-group">
+        <label for="spacingX">Distance X (px):</label>
+        <input type="number" id="spacingX" value="50" min="10" />
+      </div>
+      <div class="setting-group">
+        <label for="spacingY">Distance Y (px):</label>
+        <input type="number" id="spacingY" value="50" min="10" />
+      </div>
+
+      <!-- Symbols & Clusters -->
+      <div class="setting-group-header">Symbols & Clusters</div>
+      <div class="setting-group">
+        <label for="fontSize">Icon size (px):</label>
+        <input type="number" id="fontSize" value="20" min="8" max="64" />
+      </div>
+      <!-- Dense pale bubbles -->
+      <div class="setting-group">
+        <label for="symbolDensity">Dense pale bubbles (%):</label>
+        <input
+          type="range"
+          id="symbolDensity"
+          value="1.0"
+          min="0"
+          max="1"
+          step="0.01"
+        />
+        <span id="symbolDensityValue">100%</span>
+      </div>
+      <div class="setting-group">
+        <label for="defaultIconOpacity">Standard opacity icon:</label>
+        <input
+          type="range"
+          id="defaultIconOpacity"
+          value="0.8"
+          min="0"
+          max="1"
+          step="0.01"
+        />
+        <span id="defaultIconOpacityValue">0.80</span>
+      </div>
+      <div class="setting-group">
+        <label for="clusterCount">Number of clusters:</label>
+        <input type="number" id="clusterCount" value="20" min="0" max="50" />
+      </div>
+      <div class="setting-group">
+        <label for="clusterRadius">Cluster radius (px):</label>
+        <input
+          type="number"
+          id="clusterRadius"
+          value="300"
+          min="50"
+          max="1000"
+        />
+      </div>
+
+      <!-- Form style -->
+      <div class="setting-group-header">Form style</div>
+      <div class="setting-group">
+        <label for="borderCorners">Shape corners (2=circle, 3+=corners):</label>
+        <input type="number" id="borderCorners" value="6" min="2" />
+      </div>
+      <div class="setting-group">
+        <label for="borderRadius">Form Radius (px):</label>
+        <input type="number" id="borderRadius" value="20" min="5" />
+      </div>
+      <div class="setting-group">
+        <label for="coloredOpacity">Colored shape Opacity (Light):</label>
+        <input
+          type="range"
+          id="coloredOpacity"
+          value="0.8"
+          min="0.1"
+          max="1"
+          step="0.01"
+        />
+        <span id="coloredOpacityValue">1.00</span>
+      </div>
+      <div class="setting-group">
+        <label for="borderFillOpacity">Standard Form Fill Opacity:</label>
+        <input
+          type="range"
+          id="borderFillOpacity"
+          value="0.2"
+          min="0"
+          max="1"
+          step="0.01"
+        />
+        <span id="borderFillOpacityValue">0.20</span>
+      </div>
+      <div class="setting-group">
+        <label for="borderStrokeWidth">Form edge thickness (px):</label>
+        <input type="number" id="borderStrokeWidth" value="3" min="0" max="5" />
+      </div>
+      <div class="setting-group">
+        <label for="borderStrokeOpacity">Standard Form Edge Opacity:</label>
+        <input
+          type="range"
+          id="borderStrokeOpacity"
+          value="0.5"
+          min="0"
+          max="1"
+          step="0.01"
+        />
+        <span id="borderStrokeOpacityValue">0.30</span>
+      </div>
+
+      <button id="applySettings">Apply settings & regenerate</button>
+      <button id="downloadImage">Download image</button>
+    </div>
+
+    <!-- Canvas preview area -->
+    <div id="canvas-container">
+      <canvas id="bg-canvas"></canvas>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
+

@@ -1,0 +1,20 @@
+{
+  "name": "wallpaper-generator",
+  "private": true,
+  "version": "1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "chroma-js": "^2.4.2"
+  },
+  "devDependencies": {
+    "@types/chroma-js": "^2.4.4",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0"
+  }
+}
+
