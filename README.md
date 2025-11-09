@@ -1,4 +1,4 @@
-# Abstract Icon-Wallpaper Generator
+# 🎨 Abstract Icon-Wallpaper Generator
 A web-based tool for generating your own abstract background images in the Monokai style. This project uses HTML5 Canvas, TypeScript, and Vite to create a 2D array of icons (Font Awesome) with random, colored clusters.
 
 The tool offers a comprehensive settings panel to control every aspect of the generated image and download the result as a high-resolution PNG.
@@ -9,7 +9,7 @@ The tool offers a comprehensive settings panel to control every aspect of the ge
 
 <br></br>
 
-Features:
+## ✨ Features:
 
 - Dynamic generation: Each image is procedurally generated on an HTML5 canvas
 - Interactive web UI: A settings panel allows live adjustment of all parameters
@@ -24,7 +24,9 @@ Features:
 - Density control: A slider controls the percentage of pale symbols displayed. Colored cluster symbols always remain visible
 - PNG export: Download the generated image in the set resolution
 
-Technologies used:
+<br></br>
+
+## 🛠️ Tech Stack:
 
 - Vite: As a super-fast build tool and development server
 - TypeScript: For type safety and better code organization
@@ -33,7 +35,7 @@ Technologies used:
 
 <br></br>
 
-Installation & Execution:
+## 🚀 Getting Started:
 
 To run the project locally, follow these steps:
 
@@ -59,7 +61,7 @@ Web application:
 
 <br></br>
 
-Configuration:
+## ⚙️ Configuration:
 
 All important settings can be configured directly via the web interface.
 
